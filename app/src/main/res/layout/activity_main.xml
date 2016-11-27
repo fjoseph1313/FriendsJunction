@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.utopia.friendsjunction.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:id="@+id/TopLoginLayout"
+        android:background="#FFE6DCDF"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/BottomSignupLayout"
+        android:layout_marginBottom="24dp"
+        android:layout_height="0dp">
+
+        <TextView
+            android:text="Login with facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="40dp"
+            android:textSize="24sp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintLeft_toRightOf="@+id/imageButton" />
+
+        <ImageButton
+            app:srcCompat="@drawable/facebook_icon"
+            android:id="@+id/imageButton"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:scaleType="centerCrop"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="32dp" />
+
+        <Button
+            android:text="Log In"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginBtn"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            android:layout_marginBottom="48dp"
+            android:backgroundTint="@android:color/holo_purple"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:inputType="textPersonName"
+            android:text="Password"
+            android:ems="10"
+            android:id="@+id/password"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="24dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/loginBtn"
+            android:layout_marginBottom="32dp" />
+
+        <EditText
+            android:inputType="textPersonName"
+            android:text="Username"
+            android:ems="10"
+            android:id="@+id/username"
+            android:layout_width="0dp"
+            android:layout_gravity="fill_vertical"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/password"
+            android:layout_marginBottom="16dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_height="100dp"
+        android:id="@+id/BottomSignupLayout"
+        android:background="#FFE6DCDF">
+
+        <TextView
+            android:text="Don't have an account? SignUp"
+            android:layout_height="0dp"
+            android:id="@+id/textView4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:textSize="18sp"
+            app:layout_constraintVertical_bias="0.43"
+            android:gravity="center" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
