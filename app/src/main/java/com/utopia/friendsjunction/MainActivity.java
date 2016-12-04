@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -19,6 +20,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView signUpView = (TextView) findViewById(R.id.signupView);
+        signUpView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void performLogin(View view) {
@@ -31,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         // TODO Cloud authentication should be called here.
         if(checkCredentials(credential)){
             Intent intent = new Intent(this, DisplayClouds.class);
-            intent.putExtra(EXTRA_USERNAME, uname);
+            //intent.putExtra(EXTRA_USERNAME, uname);
             startActivity(intent);
         }else{
             //Redirect back to login page with Access Denied message.

@@ -14,13 +14,13 @@ public class DisplayClouds extends AppCompatActivity {
         setContentView(R.layout.activity_display_clouds);
 
         Intent intent = this.getIntent();
-        String uname = intent.getStringExtra(MainActivity.EXTRA_USERNAME);
+        //String uname = intent.getStringExtra(MainActivity.EXTRA_USERNAME);
         TextView textView = new TextView(this);
         textView.setTextSize(34);
-        String welcomeMsg = String.format("Welcome '%s', Please Jump In to one of the Clouds.", uname);
+        String welcomeMsg = String.format("Welcome Friend, Please Jump In to one of the Clouds.");
         textView.setText(welcomeMsg);
 
-        ViewGroup layout = (ViewGroup) findViewById(R.id.activity_display_balloons);
+        ViewGroup layout = (ViewGroup) findViewById(R.id.activity_display_clouds);
         layout.addView(textView);
     }
 }
