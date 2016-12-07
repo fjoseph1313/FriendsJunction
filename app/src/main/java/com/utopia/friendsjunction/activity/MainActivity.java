@@ -1,4 +1,4 @@
-package com.utopia.friendsjunction;
+package com.utopia.friendsjunction.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.utopia.friendsjunction.R;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             //intent.putExtra(EXTRA_USERNAME, uname);
             startActivity(intent);
         }else{
-            //Redirect back to login page with Access Denied message.
+            //TODO Redirect back to login page with Access Denied message.
         }
     }
 

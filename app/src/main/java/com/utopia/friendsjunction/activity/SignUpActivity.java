@@ -1,4 +1,4 @@
-package com.utopia.friendsjunction;
+package com.utopia.friendsjunction.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.utopia.friendsjunction.R;
 import com.utopia.friendsjunction.model.Jumper;
 
 public class SignUpActivity extends AppCompatActivity {

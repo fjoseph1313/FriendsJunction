@@ -1,7 +1,9 @@
-package com.utopia.friendsjunction;
+package com.utopia.friendsjunction.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.utopia.friendsjunction.R;
 
 public class DisplayBalloons extends AppCompatActivity {
 
