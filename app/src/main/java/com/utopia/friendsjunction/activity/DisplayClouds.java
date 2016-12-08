@@ -1,5 +1,6 @@
 package com.utopia.friendsjunction.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +16,7 @@ import java.util.Date;
 
 public class DisplayClouds extends AppCompatActivity {
 
-    //This dummy for mocking frontend
+    public static final String CLOUD_SELECTED = "CLOUD_ID";
     private final Cloud[] clouds = {
             Cloud.builder().withCloudName("AJ's Cloud").withCloudStatus("Active").withCloudCreatedDate(new Date()).build(),
             Cloud.builder().withCloudName("Francis's Cloud").withCloudStatus("InActive").withCloudCreatedDate(new Date()).build(),
@@ -40,6 +41,10 @@ public class DisplayClouds extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String selectedItem = String.format("Jump In cloud : %s ? ..", getCloudsFromTheCloud()[i].getCloudName());
                 Toast.makeText(getApplicationContext(), selectedItem, Toast.LENGTH_SHORT).show();
+                //TODO : needs to launch a balloon display here
+                Intent intent = new Intent(getApplicationContext(), DisplayBalloons.class);
+                intent.putExtra(CLOUD_SELECTED, getCloudsFromTheCloud()[i].getId());
+                startActivity(intent);
             }
         });
     }

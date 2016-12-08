@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Balloon Name goes here as whole description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/balloonName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"
+        android:textColorLink="?android:attr/colorForeground"
+        android:textColor="#000000" />
+
+    <TextView
+        android:text="Hovering..."
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/balloonStatus"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/balloonName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textStyle="italic"
+        android:textColor="#add8e6" />
+
+    <TextView
+        android:text="1214 Arrows"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/balloonArrows"
+        android:layout_marginStart="24dp"
+        app:layout_constraintLeft_toRightOf="@+id/balloonStatus"
+        app:layout_constraintTop_toBottomOf="@+id/balloonName"
+        android:layout_marginTop="4dp"
+        android:textColor="#FFD700" />
+</android.support.constraint.ConstraintLayout>

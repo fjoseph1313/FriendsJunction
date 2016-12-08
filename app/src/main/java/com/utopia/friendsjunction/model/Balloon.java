@@ -15,6 +15,15 @@ public class Balloon implements Serializable{
 	private Cloud cloud;
 	private List<Arrow> arrows;
 
+	private Balloon(Builder builder){
+		setId(builder.id);
+		setBalloonName(builder.balloonName);
+		setBalloonCreatedDate(builder.balloonCreatedDate);
+		setBalloonStatus(builder.balloonStatus);
+		setCloud(builder.cloud);
+		setArrows(builder.arrows);
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -63,5 +72,66 @@ public class Balloon implements Serializable{
 		this.arrows = arrows;
 	}
 	
-	
+	//Builder design pattern for object construction
+	public Builder copyBuilder() {
+		return new Builder(this);
+	}
+
+	public static Builder builder() {
+		return new Builder();
+	}
+
+	public static final class Builder {
+		private Long id;
+		private String balloonName;
+		private Date balloonCreatedDate;
+		private String balloonStatus;
+		private Cloud cloud;
+		private List<Arrow> arrows;
+
+		private Builder(){}
+
+		private Builder(Balloon balloon){
+			id = balloon.id;
+			balloonName = balloon.balloonName;
+			balloonCreatedDate = balloon.balloonCreatedDate;
+			balloonStatus = balloon.balloonStatus;
+			cloud = balloon.cloud;
+			arrows =balloon.arrows;
+		}
+
+		public Builder withId(Long id){
+			this.id = id;
+			return this;
+		}
+
+		public Builder withBalloonName(String name){
+			this.balloonName = name;
+			return this;
+		}
+
+		public Builder withBalloonCreatedDate(Date date){
+			this.balloonCreatedDate = date;
+			return this;
+		}
+
+		public Builder withBalloonStatus(String status){
+			this.balloonStatus = status;
+			return this;
+		}
+
+		public Builder withCloud(Cloud cloud){
+			this.cloud = cloud;
+			return this;
+		}
+
+		public Builder withArrows(List<Arrow> arrows){
+			this.arrows = arrows;
+			return this;
+		}
+
+		public Balloon build(){
+			return new Balloon(this);
+		}
+	}
 }
