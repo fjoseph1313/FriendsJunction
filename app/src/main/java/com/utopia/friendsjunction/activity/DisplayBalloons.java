@@ -17,6 +17,7 @@ import java.util.List;
 
 public class DisplayBalloons extends AppCompatActivity {
 
+    public static final String BALLOON_SELECTED = "BALLOON_ID";
     private List<Balloon> balloons = Arrays.asList(
             Balloon.builder().withBalloonName("Happy People Balloon").withBalloonStatus("Hovering...").build(),
             Balloon.builder().withBalloonName("Freedom Balloon").withBalloonStatus("Sinking...").build(),
@@ -43,6 +44,10 @@ public class DisplayBalloons extends AppCompatActivity {
                 String selectedItem = balloon.getBalloonName();
                 Toast.makeText(getApplicationContext(), selectedItem, Toast.LENGTH_SHORT).show();
                 //TODO : Launch arrows shooting ui
+                Long balloon_id = balloon.getId();
+                Intent intent = new Intent(getApplicationContext(), DisplayArrows.class);
+                intent.putExtra(BALLOON_SELECTED, balloon_id);
+                startActivity(intent);
             }
         });
     }

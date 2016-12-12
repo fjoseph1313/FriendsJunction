@@ -18,7 +18,8 @@
         <activity android:name=".activity.DisplayBalloons" />
         <activity android:name=".activity.DisplayClouds" />
         <activity android:name=".activity.ShootArrows" />
-        <activity android:name=".activity.SignUpActivity"></activity>
+        <activity android:name=".activity.SignUpActivity" />
+        <activity android:name=".activity.DisplayArrows"></activity>
     </application>
 
 </manifest>
